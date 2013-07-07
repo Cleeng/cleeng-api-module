@@ -10,11 +10,13 @@ Installation
 
 1. Add `cleeng/cleeng-api-module` to your `composer.json` file:
 
-```
-"requires": {
-    "cleeng/cleeng-api-module": "dev-master"
-}
-```
+    ```json
+    {
+        "require": {
+            "cleeng/cleeng-api-module": "dev-master"
+        }
+    }
+    ```
 
 2. Run `composer.phar update` to download this module and Cleeng PHP SDK.
 
@@ -24,24 +26,24 @@ Installation
 
 4. Enable CleengApiModule in your `application.config.php` file:
 
-```php
-return array(
-    'modules' => array(
-        'Application',
-        'CleengApiModule',
-        // other modules...
-    ),
-    'module_listener_options' => array(
-        'config_glob_paths'    => array(
-            'config/autoload/{,*.}{global,local}.php',
+    ```php
+    return array(
+        'modules' => array(
+            'Application',
+            'CleengApiModule',
+            // other modules...
         ),
-        'module_paths' => array(
-            './module',
-            './vendor',
+        'module_listener_options' => array(
+            'config_glob_paths'    => array(
+                'config/autoload/{,*.}{global,local}.php',
+            ),
+            'module_paths' => array(
+                './module',
+                './vendor',
+            ),
         ),
-    ),
-);
-```
+    );
+    ```
 
 Usage
 -----
@@ -62,9 +64,10 @@ if ($cleengApi->isAccessGranted('R123123123_US')) {
 CleengApiModule provides handy shortcut for enabling [Cleeng Javascript API](http://cleeng.com/open/v3/JS_API_Reference/Cleeng_JavaScript_Library)
 from within your views:
 
-```php
+```html
 <?php
-$this->enableCleengJsApi();  // this will add JS API url to <script> tag in HEAD section
+// this will add JS API url to <script> tag in HEAD section
+$this->enableCleengJsApi();
 ?>
 
 <script type="text/javascript">
