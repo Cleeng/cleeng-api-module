@@ -13,21 +13,12 @@
 namespace CleengApiModule\Service;
 
 use Cleeng_Api;
-use DoctrineModule\Service\AbstractFactory;
+use CleengApiModule\Options\CleengApi as CleengApiOptions;
+use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
-class CleengApiFactory extends AbstractFactory
+class CleengApiFactory implements FactoryInterface
 {
-
-    /**
-     * Get the class name of the options associated with this factory.
-     *
-     * @return string
-     */
-    public function getOptionsClass()
-    {
-        return 'CleengApiModule\Options\CleengApi';
-    }
 
     /**
      * Create service
@@ -37,8 +28,8 @@ class CleengApiFactory extends AbstractFactory
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $options = $this->getOptions($serviceLocator, 'cleeng_api');
-        $api = new Cleeng_Api($options->toArray());
+        $cfg = $serviceLocator->get('Configuration');
+        $api = new Cleeng_Api($cfg['cleeng_api']);
         return $api;
     }
 }

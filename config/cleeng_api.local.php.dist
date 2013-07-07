@@ -1,0 +1,14 @@
+<?php
+/**
+ * Template config file for Cleeng API
+ */
+
+return array(
+
+    'cleeng_api' => array(
+
+        // get your publisher token from https://cleeng.com/us/dev/api-keys
+        'publisherToken' => 'PUBLISHER_TOKEN',
+    ),
+
+);
