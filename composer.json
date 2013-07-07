@@ -1,0 +1,34 @@
+{
+    "name": "cleeng/cleeng-api-module",
+    "description": "Zend Framework 2 module that integrates your app with Cleeng API SDK",
+    "type": "module",
+    "version": "1.0",
+    "keywords": [
+        "zf2",
+        "cleeng",
+        "api",
+        "sdk"
+    ],
+    "homepage": "https://github.com/cleeng/cleeng-api-module",
+    "authors": [
+        {
+            "name": "Mateusz Tymek",
+            "email": "mtymek@gmail.com",
+            "homepage": "http://mateusztymek.pl"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*",
+        "cleeng/cleeng-php-sdk": "dev-master",
+        "zendframework/zendframework": "2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "CleengApiModule": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}

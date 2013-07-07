@@ -6,9 +6,11 @@
 return array(
 
     'cleeng_api' => array(
-
         // get your publisher token from https://cleeng.com/us/dev/api-keys
-        'publisherToken' => 'PUBLISHER_TOKEN',
+        //'publisherToken' => 'PUBLISHER_TOKEN',
+
+        // uncomment if you need to stack multiple calls in single HTTP request
+        //'batchMode' => true,
     ),
 
 );
