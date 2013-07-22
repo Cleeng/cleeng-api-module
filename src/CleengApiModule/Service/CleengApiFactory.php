@@ -29,7 +29,8 @@ class CleengApiFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $cfg = $serviceLocator->get('Configuration');
-        $api = new Cleeng_Api($cfg['cleeng_api']);
+        $options = new CleengApiOptions($cfg['cleeng_api']);
+        $api = new Cleeng_Api($options->toArray());
         return $api;
     }
 }

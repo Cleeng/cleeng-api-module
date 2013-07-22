@@ -9,6 +9,9 @@ return array(
         // get your publisher token from https://cleeng.com/us/dev/api-keys
         //'publisherToken' => 'PUBLISHER_TOKEN',
 
+        // distributor token (Enterprise API)
+        //'distributorToken' => 'DISTRIBUTOR_TOKEN',
+
         // uncomment if you need to stack multiple calls in single HTTP request
         //'batchMode' => true,
     ),
