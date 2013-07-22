@@ -1,6 +1,7 @@
 {
     "name": "cleeng/cleeng-api-module",
     "description": "Zend Framework 2 module that integrates your app with Cleeng API SDK",
+    "license": "BSD-3-Clause",
     "type": "module",
     "version": "1.0",
     "keywords": [
