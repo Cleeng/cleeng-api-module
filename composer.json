@@ -1,6 +1,6 @@
 {
     "name": "cleeng/cleeng-api-module",
-    "description": "Zend Framework 2 module that integrates your app with Cleeng API SDK",
+    "description": "Cleeng is a SaaS e-commerce platform for selling digital media. This module provides integration between your ZF2 application and Cleeng API.",
     "license": "BSD-3-Clause",
     "type": "module",
     "version": "1.0",
@@ -8,7 +8,10 @@
         "zf2",
         "cleeng",
         "api",
-        "sdk"
+        "sdk",
+        "digital content",
+        "digital media",
+        "e-commerce"
     ],
     "homepage": "https://github.com/cleeng/cleeng-api-module",
     "authors": [
